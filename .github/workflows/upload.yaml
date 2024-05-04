@@ -1,4 +1,4 @@
-name: upload to kaggle test
+name: upload to kaggle
 on:
   pull_request:
       types: closed

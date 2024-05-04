@@ -1,9 +1,9 @@
 name: upload to kaggle test
-on: push
-  # pull_request:
-  #     types: closed
-  #     branches:
-  #       - 'main'
+on: 
+  pull_request:
+      types: closed
+      branches:
+        - 'main'
 
 jobs:
   UplodaKaggle:
@@ -31,4 +31,4 @@ jobs:
         env:
           KAGGLE_USERNAME: ${{ secrets.KAGGLEUSERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLEKEY }}
-        run: echo ${{ secrets.KAGGLEKEY }} && kaggle datasets version -p ./upload_kaggle_dir -m 'update' -d
+        run: kaggle datasets version -p ./upload_kaggle_dir -m 'update' -d

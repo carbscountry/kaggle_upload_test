@@ -1,9 +1,9 @@
 name: upload to kaggle test
-on: 
-  pull_request:
-      types: closed
-      branches:
-        - 'main'
+on: push
+  # pull_request:
+  #     types: closed
+  #     branches:
+  #       - 'main'
 
 jobs:
   UplodaKaggle:
